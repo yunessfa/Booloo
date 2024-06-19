@@ -12,11 +12,13 @@ import Board from "./Components/Board";
 import Footer from "./Components/Footer";
 
 function App() {
+
   return (
     <>
       <div className="bg-black relative">
         <div>
           <Header />
+          {/* <w3m-button/> */}
           <div className="">
             <img src={HeadBG} className="w-full" />
             <div className="flex flex-col items-center -mt-[40%] mb-[15%]">

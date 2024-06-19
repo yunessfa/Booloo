@@ -52,7 +52,7 @@ export default function TotalRaised() {
               ></div>
             </div>
 
-            <div className="w-full flex justify-around items-center mt-[48px] gap-4 lg:gap-0">
+            <div className="w-full flex justify-around items-center mt-[24px] gap-4 lg:gap-0">
               <div className="flex items-center justify-between px-4 bg-[#DAB63C0D] border-2 border-[#DAB63C] w-[30%] py-2">
                 <p className="text-[#F2E9B8] text-[24px] sm:text-[28px] lg:text-[32px]">
                   0.5
@@ -68,7 +68,7 @@ export default function TotalRaised() {
               </div>
             </div>
 
-            <div className="flex  items-center justify-around w-full mt-2 gap-8 lg:gap-0">
+            <div className="flex  items-center justify-around w-full mt-4 gap-8 lg:gap-0">
               <div className="flex flex-col gap-3 items-center lg:items-start">
                 <p className="text-[#F2E9B8] text-[20px] sm:text-[22px] lg:text-[24px]">
                   MIN DEPOSIT
