@@ -14,8 +14,6 @@ export default function Header() {
     setIsOpen(!isOpen);
   };
 
-
-
   return (
     <div className="flex items-center justify-between py-4 px-4 bg-[#19150AB2] w-full h-auto absolute">
       <img
@@ -36,7 +34,10 @@ export default function Header() {
         <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#F2E9B8] cursor-pointer">
           Referral
         </p>
-        <div className="bg-[#DAB63C33] mx-4 sm:mx-8 py-2 px-4 sm:py-4 sm:px-7 border-2 border-[rgba(218, 182, 60, 1)]" onClick={open}>
+        <div
+          className="bg-[#DAB63C33] mx-4 sm:mx-8 py-2 px-4 sm:py-4 sm:px-7 border-2 border-[rgba(218, 182, 60, 1)]"
+          onClick={open}
+        >
           <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-[#F2E9B8] cursor-pointer">
             CONNECT WALLET
           </p>
@@ -56,16 +57,26 @@ export default function Header() {
           <p className="text-xl text-[#F2E9B8] cursor-pointer">Presale</p>
           <p className="text-xl text-[#F2E9B8] cursor-pointer">Airdrop</p>
           <p className="text-xl text-[#F2E9B8] cursor-pointer">Referral</p>
-          <div
-            className="bg-[#DAB63C33] py-2 px-4 border-2 border-[rgba(218, 182, 60, 1)]"
-          >
-            <p className="text-xl text-[#F2E9B8] cursor-pointer">
-              CONNECT WALLET
-            </p>
-          </div>
+          {!isConnected && (
+            <div
+              className="bg-[#DAB63C33] py-2 px-4 border-2 border-[rgba(218, 182, 60, 1)]"
+              onClick={open}
+            >
+              <p className="text-xl text-[#F2E9B8] cursor-pointer">
+                CONNECT WALLET
+              </p>
+            </div>
+          )}
+          {isConnected && (
+            <div
+              className="bg-[#DAB63C33] py-2 px-4 border-2 border-[rgba(218, 182, 60, 1)]"
+              onClick={disconnect}
+            >
+              <p className="text-xl text-[#F2E9B8] cursor-pointer">{address}</p>
+            </div>
+          )}
         </div>
       )}
-
     </div>
   );
 }
